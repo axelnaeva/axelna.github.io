@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXELNA SOLUTIONS G.K.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="navigationBarContainer">
+            <div class="insideLeftNavigationBar image-container">
+                <!--<h1>AXELNA SOLUTIONS G.K.</h1>-->
+                <img style="height:3rem;" src="images/company_logo.png">
+            </div>
+            <div class="insideRightNavigationBar">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#contact-us">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video autoplay loop muted class="video-background" >
+            <source src="videos/v3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Transform Your Supply Chain With Cutting-Edge </br> Planning Solution</h2>
+                <p>Optimize, Predict, And Scale Your Operations With Ease</p>
+                <a href="#solutions" class="cta-button">Explore Solutions</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="solutions" class="blue-yonder">
+        <div>Our Solutions</div>
+    </div>
+
+   <!-- Solutions Section -->
+   <section class="solutions">
+        <div class="container" style="width:90vw">
+            <div class="slideshow-container">
+                <div class="solution-slide active" data-section="demand_planning">
+                    <div class="slide-content" style="background-image: url('images/forecast.jpg');">
+                        <i class="mdi mdi-chart-line fa-4x"></i>
+                        <h3>Sales Forecast & Demand Planning</h3>
+                        <p>
+                            Utilize advanced forecasting models to predict market demand accurately, enabling proactive inventory 
+                            management and meeting customer expectations efficiently.</p>
+                    </div>
+                </div>
+                <div class="solution-slide" data-section="production_planning">
+                    <div class="slide-content" style="background-image: url('images/material.jpg');">
+                        <i class="mdi mdi-factory fa-4x"></i>
+                        <h3>Production & Material Planning</h3>
+                        <p>Optimize production schedules and ensure seamless material availability through intelligent planning strategies, 
+                            enhancing operational efficiency and reducing costs.</p>
+                    </div>
+                </div>
+                <div class="solution-slide" data-section="distribution_planning">
+                    <div class="slide-content" style="background-image: url('images/distribution.jpg');">
+                        <i class="mdi mdi-warehouse fa-4x"></i>
+                        <h3>Inventory & Distribution Planning</h3>
+                        <p>Streamline inventory management and distribution channels to maintain optimal stock levels, 
+                            minimize stockouts, and improve order fulfillment processes.</p>
+                    </div>
+                </div>
+                <!-- Navigation Arrows -->
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+            <!-- Dots Navigation -->
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <div class="blue-yonder">
+        <div>Powered By</div>
+    </div>
+
+    <div class="section-divider">
+        <div>
+            <img style="height: 2.5rem; margin-bottom: 1rem;" src="images/blue_yonder.png" alt="Blue Yonder logo">
+        </div>
+        <div class="section-buttons">
+            <button id="demand_planning_btn" onclick="showSection('demand_planning')" class="section-button">Demand Planning</button>
+            <button id="production_planning_btn" onclick="showSection('production_planning')" class="section-button">Production Planning</button>
+            <button id="distribution_planning_btn" onclick="showSection('distribution_planning')" class="section-button">Inventory & Distribution Planning</button>
+        </div>
+    </div>
+    
+    
+    <section id="planning_sections">
+        <section id="demand_planning" class="planning-section active">
+            <div style="display: flex; flex-direction: column;">
+                <div class="product_description">
+                    <div style="width:80%">
+                        Unlock the power of precision with Blue Yonder demand planning solutions, 
+                        which is adopted and used extensively by leading manufacturers and retailers 
+                        around the world. Use cutting-edge forecasting techniques to understand sales 
+                        seasonality and impacts of events, harness consumer insights from its data 
+                        analytical capabilities.
+                    </div>
+                </div>
+
+                <div style="display: flex;">
+                    <div style="width: 35%;padding:1rem">
+                        <div class="functionality">
+                            <h3>Functionality</h3>
+                            <p>Explore the key functionalities of our demand planning solutions:</p>
+                        </div>
+                        <ul id="demand_list">
+                            <li data-image="demand_planning/consensus_demand.jpg" data-description="Achieve alignment across your organization with consensus demand planning. Integrate insights from sales, marketing, and operations to create a unified and accurate demand forecast.">Consensus Demand</li>
+                            <li data-image="demand_planning/demand_forecasting.jpg" data-description="Leverage advanced algorithms and historical data to generate precise demand forecasts. Predict customer needs with confidence and ensure optimal inventory levels.">Demand Forecasting</li>
+                            <li data-image="demand_planning/promotional_factors.jpg" data-description="Accurately factor in the impact of promotions and events on demand. Adjust forecasts to account for seasonal variations, marketing campaigns, and special events to stay ahead of the curve.">Promotional / Event Factors</li>
+                            <li data-image="demand_planning/powerful_automation.jpg" data-description="Streamline your demand planning process with powerful automation. Reduce manual intervention, minimize errors, and improve efficiency with automated data collection and analysis.">Powerful Automation</li>
+                        </ul>
+                    </div>
+                    <div class="image-section">
+                        <img id="demand_image" src="demand_planning/consensus_demand.jpg" alt="Demand Planning Image">
+                    </div>
+                </div>
+                <div class="description-container">
+                    <div id="demand_description" class="description-content">
+                        Achieve alignment across your organization with consensus demand planning. Integrate insights from sales, marketing, and operations to create a unified and accurate demand forecast.
+                    </div>
+                </div>
+                <div class="downloadContainer">
+                    <div class="downloadInfo">Download for more info:</div>
+                    <div class="downloadPdfButtonsContainer">
+                        <button class="downloadButton" id="downloadDemandPlanning1">
+                            Cognitive Demand Planning
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        </button>
+                        <button class="downloadButton" id="downloadDemandPlanning2">
+                            Collaborative Demand Managment
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        </button>
+                        <button class="downloadButton" id="downloadDemandPlanning3">
+                            Forecasting
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="key-benefits-container" style="background: url('images/benefits.jpg') no-repeat center center / cover;">
+                    <div class="key-benefits-header">Key Benefits</div>
+                    <div class="key-benefits-descr-container">
+                        <div class="key-benefits-descr">
+                            <img src="demand_planning/accuracy.png" alt="Forecast Accuracy" class="key-benefits-img">
+                            <h2>Best-in-Class Forecast Accuracy</h2>
+                            <p>Achieve higher revenue and reduce waste & stockouts with precise demand plans.</p>
+                        </div>
+                        <div class="key-benefits-descr">
+                            <img src="demand_planning/prediction.png" alt="Predictive Tools" class="key-benefits-img">
+                            <h2>Advanced Predictive Tools</h2>
+                            <p>Utilize sales history and predictive models for accurate item-store forecasts.</p>
+                        </div>
+                        <div class="key-benefits-descr">
+                            <img src="demand_planning/collaboration.png" alt="Consensus Forecasting" class="key-benefits-img">
+                            <h2>Consensus Forecasting</h2>
+                            <p>Collaborate across teams to create a unified forecast with input from multiple stakeholders.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-container">
+                    <div class="results-header">Results</div>
+                    <div style="margin-top: 30px; display: flex; justify-content: space-around; gap: 20px;">
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(30 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">30%</text>
+                                </svg>
+                            </div>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Out of Stock Rate</strong>
+                            <p style="margin-top: 10px; font-size: 1em;">Ensure product availability and minimize stockouts, leading to satisfied customers and increased sales.</p>
+                        </div>
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(95 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">95%</text>
+                                </svg>
+                            </div>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Forecast Accuracy Level</strong>
+                            <p style="margin-top: 10px; font-size: 1em;">Achieve high levels of precision in your demand forecasts, enabling better inventory management and efficient supply chain operations.</p>
+                        </div>
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(10 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">10%</text>
+                                </svg>
+                            </div>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Waste</strong>
+                            <p style="margin-top: 10px; font-size: 1em;">Optimize inventory levels to reduce excess stock and waste, resulting in cost savings and improved sustainability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="production_planning" class="planning-section">
+            <div style="display: flex; flex-direction: column;">
+                <div class="product_description">
+                    <div style="width:80%">
+                        Revolutionize your manufacturing process with our comprehensive production planning solutions. 
+                        Seamlessly integrate Master Production Scheduling (MPS), Material Requirements Planning (MRP), material planning, 
+                        and capacity planning to elevate your operations to new heights.
+                    </div>
+                </div>
+                <div style="display: flex;">
+                    <div style="width: 35%;padding:1rem">
+                        <div class="functionality">
+                            <h3>Functionality</h3>
+                            <p>Explore the key functionalities of our production planning solutions:</p>
+                        </div>
+                        <ul id="production_list">
+                            <li data-image="production_planning/dynamic_master_planning.jpg" data-description="A comprehensive, real-time dashboard that provides a holistic view of your production process. Monitor key performance indicators (KPIs), track progress, and identify bottlenecks at a glance.">Production Planning Dashboard</li>
+                            <li data-image="production_planning/root_cause_analysis.jpg" data-description="Enhance customer satisfaction and order fulfillment with our Available to Promise (ATP) and Capable to Promise (CTP) functionalities. Quickly determine product availability and production capabilities to commit accurate delivery dates.">Available To Promise And Capable To Promise</li>
+                            <li data-image="production_planning/create_network_resilience.jpg" data-description="Identify and address production issues effectively with advanced root cause analysis tools. Drill down into data to uncover the origins of production delays, quality issues, and inefficiencies.">Root Cause Analysis</li>
+                            <li data-image="production_planning/what_if_analysis.jpg" data-description="Evaluate potential production changes and their impacts with powerful what-if analysis. Simulate various scenarios to make informed decisions and optimize your production strategy.">What If Analysis</li>
+                            <li data-image="production_planning/scenario_planning.jpg" data-description="Prepare for any eventuality with robust scenario planning capabilities. Develop and compare multiple production plans based on different assumptions and variables to ensure resilience and adaptability.">Scenario Planning</li>
+                        </ul>
+                    </div>
+                    <div class="image-section">
+                        <img id="production_image" src="production_planning/dynamic_master_planning.jpg" alt="Production Planning Image">
+                    </div>
+                </div>
+                <div class="description-container">
+                    <div id="production_description" class="description-content">
+                        A comprehensive, real-time dashboard that provides a holistic view of your production process. Monitor key performance indicators (KPIs), track progress, and identify bottlenecks at a glance.
+                    </div>
+                </div>
+                <div class="downloadContainer">
+                    <div class="downloadInfo">Download for more info:</div>
+                    <div class="downloadPdfButtonsContainer">
+                        <button class="downloadButton" id="downloadProductionPlanning1">
+                            Replenishment for Manufacturing
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        </button>
+                        <button class="downloadButton" id="downloadProductionPlanning2">
+                            Integrated Demand And Supply Planning
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        </button>
+                        <button class="downloadButton" id="downloadProductionPlanning3">
+                            Production Planning
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="key-benefits-container" style="background: url('images/benefits.jpg') no-repeat center center / cover;">
+                    <div class="key-benefits-header">Key Benefits</div>
+                    <div class="key-benefits-descr-container">
+                        <div class="key-benefits-descr">
+                            <img src="production_planning/agile.png" alt="Agile Response" class="key-benefits-img">
+                            <h2>Agile Response</h2>
+                            <p>Quickly adapt to market disruptions and maintain seamless operations.</p>
+                        </div>
+                        <div class="key-benefits-descr">
+                            <img src="production_planning/workflow.png" alt="Optimize Challenges" class="key-benefits-img">
+                            <h2>Optimize Challenges</h2>
+                            <p>Streamline complex manufacturing processes and address issues with ease.</p>
+                        </div>
+                        <div class="key-benefits-descr">
+                            <img src="production_planning/performance.png" alt="Boost Performance" class="key-benefits-img">
+                            <h2>Boost Performance</h2>
+                            <p>Enhance efficiency and productivity to achieve operational excellence.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="results-container">
+                    <div class="results-header">Results</div>
+                    <div style="margin-top: 30px; display: flex; justify-content: space-around; gap: 20px;">
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(25 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">25%</text>
+                                </svg>
+                            </div>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Inventory</strong>
+                            <p style="margin-top: 10px; font-size: 1em;">Optimize inventory levels, reducing excess stock and improving efficiency.</p>
+                        </div>
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(60 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">60%</text>
+                                </svg>
+                            </div>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Improved Productivity</strong>
+                            <p style="margin-top: 10px; font-size: 1em;">Enhance productivity with streamlined production processes.</p>
+                        </div>
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(30 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">30%</text>
+                                </svg>
+                            </div>
+                            <strong style="font-size: 1.5em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Expenses</strong>
+                            <p style="margin-top: 10px; font-size: 1em;">Reduce operational costs and improve financial performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="distribution_planning" class="planning-section">
+            <div style="display: flex; flex-direction: column;">
+                <div class="product_description">
+                    <div style="width:80%">
+                        Take control of your supply chain with our state-of-the-art inventory and distribution planning solutions. 
+                        Ensure your products reach the point-of-sales efficiently, every time. With our system, 
+                        the right product is always in the right place at the right time.
+                    </div>
+                </div>
+                <div style="display: flex;">
+                    <div style="width: 35%;padding:1rem">
+                        <div class="functionality">
+                            <h3>Functionality</h3>
+                            <p>Explore the key functionalities of our distribution planning solutions:</p>
+                        </div>
+                        <ul id="distribution_list">
+                            <li data-image="distribution_planning/build_truck_load.jpg" data-description="Optimize your logistics with our Build Truck Load feature. Efficiently plan and consolidate shipments to maximize truck utilization, reduce transportation costs, and ensure timely deliveries.">Build Truck Load</li>
+                            <li data-image="distribution_planning/right_inventory.jpg" data-description="Enhance your distribution efficiency by strategically placing inventory at the right locations. Ensure that products are always available where they are needed most, reducing lead times and improving customer satisfaction.">Place Right Inventory At Right Location</li>
+                            <li data-image="distribution_planning/date_sensitive_inventory.jpg" data-description="Manage date-sensitive inventory with precision. Track expiration dates, manage shelf life, and prioritize the distribution of perishable goods to minimize waste and meet customer expectations.">Date Sensitive Inventory</li>
+                            <li data-image="distribution_planning/dynamic_deployment.jpg" data-description="Respond swiftly to changing demand patterns with dynamic deployment. Adapt your distribution plans in real-time to ensure optimal inventory levels across all locations, enhancing agility and responsiveness.">Dynamic Deployment</li>
+                        </ul>
+                    </div>
+                    <div class="image-section">
+                        <img id="distribution_image" src="distribution_planning/build_truck_load.jpg" alt="Distribution Planning Image">
+                    </div>
+                </div>
+                <div class="description-container">
+                    <div id="distribution_description" class="description-content">
+                        Optimize your logistics with our Build Truck Load feature. Efficiently plan and consolidate shipments to maximize truck utilization, reduce transportation costs, and ensure timely deliveries.
+                    </div>
+                </div>
+
+                <div class="downloadContainer">
+                    <div class="downloadInfo">Download for more info:</div>
+                    <div class="downloadPdfButtonsContainer">
+                        <button class="downloadButton" id="downloadDistributionPlanning1">
+                            Allocation and Replenishment
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        </button>
+                        <button class="downloadButton" id="downloadDistributionPlanning2">
+                            Rapid Results Via The Cloud
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        </button>
+                        <button class="downloadButton" id="downloadDistributionPlanning3">
+                            Accelerate your Roi With Supply Planning.
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="key-benefits-container" style="background: url('images/benefits.jpg') no-repeat center center / cover;">
+                    <div class="key-benefits-header">Key Benefits</div>
+                    <div class="key-benefits-descr-container">
+                        <div class="key-benefits-descr">
+                            <img src="distribution_planning/delivery.png" alt="Maximum Freshness" class="key-benefits-img">
+                            <h2>Maximum Freshness</h2>
+                            <p>Deliver maximum freshness and minimize expiry, ensuring high on-shelf availability.</p>
+                        </div>
+                        <div class="key-benefits-descr">
+                            <img src="distribution_planning/inventory.png" alt="Optimized Service Levels" class="key-benefits-img">
+                            <h2>Optimized Service Levels</h2>
+                            <p>Simplify inventory management across multiple locations, ensuring minimal stockouts and high service levels.</p>
+                        </div>
+                        <div class="key-benefits-descr">
+                            <img src="distribution_planning/efficiency.png" alt="Supply Chain Efficiency" class="key-benefits-img">
+                            <h2>Supply Chain Efficiency</h2>
+                            <p>Achieve unparalleled accuracy in stock placement, reduce waste, and enhance distribution efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-container">
+                    <div class="results-header">Results</div>
+                    <div style="margin-top: 20px; display: flex; justify-content: space-around; gap: 20px;">
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(4 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">4%</text>
+                                </svg>
+                            </div>
+                            <strong style="font-size: 1.2em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Reduced Inventory</strong>
+                            <p style="margin-top: 10px; font-size: 1em; color: black;">Optimize inventory levels, reducing excess stock and improving efficiency.</p>
+                        </div>
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(40 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">40%</text>
+                                </svg>
+                            </div>
+                            <strong style="font-size: 1.2em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Improved Productivity</strong>
+                            <p style="margin-top: 10px; font-size: 1em; color: black;">Enhance productivity with streamlined production processes.</p>
+                        </div>
+                        <div style="width: 30%; text-align: center;">
+                            <div style="position: relative; width: 240px; height: 240px; background: #fff; border-radius: 50%; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); display: inline-block;">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="transparent" stroke="#ccc" stroke-width="10"></circle>
+                                    <path d="M 50 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0" stroke="#3A95D0" stroke-width="10"
+                                        stroke-dasharray="calc(20 * 282.6 / 100) 282.6" style="transform: rotate(-90deg); transform-origin: 50% 50%;
+                                            transition: stroke-dasharray 0.3s ease-in-out;"></path>
+                                    <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" font-size="2em"
+                                        font-weight="bold" fill="#fff" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">20%</text>
+                                </svg>
+                            </div>
+                            <strong style="font-size: 1.2em; color: black; margin-top: 20px; display: block; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);">Increased Allocation Accuracy</strong>
+                            <p style="margin-top: 10px; font-size: 1em; color: black;">Achieve precise allocation accuracy to optimize resource utilization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div id="about-us" class="blue-yonder">
+        <div>About Us</div>
+    </div>
+    
+    <section class="about-us">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Background</h2>
+                <p>
+                    Axelna Solutions was established by Mr. Alex Yap in 2019. With nearly three decades in supply chain planning and close to two decades of expertise with Blue Yonder solutions, we are dedicated to serving Southeast Asia, particularly Indonesia, Malaysia, and Thailand. Our multilingual capabilities in Bahasa, English, and Thai ensure seamless project delivery and client communication.
+                </p>
+                <p>
+                    Our core competencies include Sales & Operations Planning (S&OP), demand planning, supply planning, production planning, and supply chain optimization. We cater to diverse industries such as consumer electronics, FMCG, food & beverage, pharmaceuticals, and health sciences.
+                </p>
+                <p>
+                    At Axelna Solutions, our seasoned representatives are committed to addressing your supply chain challenges with precision and efficiency. Trust us to enhance your supply chain operations through innovative solutions and unparalleled expertise.
+                </p>
+            </div>
+            <div class="founder-info">
+                <img src="images/alex_yap.jpeg" alt="Alex Yap">
+                <div class="details">
+                    <h3>Mr. Alex Yap</h3>
+                    <p>Founder & CEO</p>
+                    <!--
+                    <p>
+                        With nearly 30 years in supply chain planning and extensive experience in implementing Blue Yonder solutions, Alex Yap drives Axelna Solutions' success across Southeast Asia. His strategic vision has led to the successful delivery of complex supply chain projects in Indonesia, Malaysia, and Thailand.
+                    </p>
+                -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="blue-yonder">
+        <div>Contact Us</div>
+    </div>
+
+    <section id="contact-us" class="contact-us">
+        <div class="contact-content">
+            <div class="contact-info">
+                <p>If you have any questions or need further information, please don't hesitate to contact us. We are here to help you with your supply chain challenges.</p>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div style="display:flex; align-items: center; justify-content: space-between;">
+                        <div class="form-group-name-left">
+                            <label for="first_name">First Name</label>
+                            <input type="text" id="first_name" name="from_first_name" required>
+                        </div>
+                        <div class="form-group-name-right">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" id="last_name" name="from_last_name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="reply_to" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <div style="display: flex;">
+                            <select class="country-dropdown" id="country_code" name="country_code" required>
+                                <option value="+93">Afghanistan (+93)</option>
+                                <option value="+973">Bahrain (+973)</option>
+                                <option value="+880">Bangladesh (+880)</option>
+                                <option value="+855">Cambodia (+855)</option>
+                                <option value="+86">China (+86)</option>
+                                <option value="+852">Hong Kong (+852)</option>
+                                <option value="+91">India (+91)</option>
+                                <option value="+62" selected>Indonesia (+62)</option> <!-- Default selected option -->
+                                <option value="+98">Iran (+98)</option>
+                                <option value="+964">Iraq (+964)</option>
+                                <option value="+972">Israel (+972)</option>
+                                <option value="+81">Japan (+81)</option>
+                                <option value="+962">Jordan (+962)</option>
+                                <option value="+7">Kazakhstan (+7)</option>
+                                <option value="+965">Kuwait (+965)</option>
+                                <option value="+996">Kyrgyzstan (+996)</option>
+                                <option value="+856">Laos (+856)</option>
+                                <option value="+961">Lebanon (+961)</option>
+                                <option value="+853">Macau (+853)</option>
+                                <option value="+60">Malaysia (+60)</option>
+                                <option value="+960">Maldives (+960)</option>
+                                <option value="+976">Mongolia (+976)</option>
+                                <option value="+95">Myanmar (Burma) (+95)</option>
+                                <option value="+977">Nepal (+977)</option>
+                                <option value="+968">Oman (+968)</option>
+                                <option value="+92">Pakistan (+92)</option>
+                                <option value="+970">Palestine (+970)</option>
+                                <option value="+63">Philippines (+63)</option>
+                                <option value="+974">Qatar (+974)</option>
+                                <option value="+7">Russia (+7)</option>
+                                <option value="+966">Saudi Arabia (+966)</option>
+                                <option value="+65">Singapore (+65)</option>
+                                <option value="+82">South Korea (+82)</option>
+                                <option value="+94">Sri Lanka (+94)</option>
+                                <option value="+963">Syria (+963)</option>
+                                <option value="+886">Taiwan (+886)</option>
+                                <option value="+992">Tajikistan (+992)</option>
+                                <option value="+66">Thailand (+66)</option>
+                                <option value="+90">Turkey (+90)</option>
+                                <option value="+993">Turkmenistan (+993)</option>
+                                <option value="+971">United Arab Emirates (+971)</option>
+                                <option value="+998">Uzbekistan (+998)</option>
+                                <option value="+84">Vietnam (+84)</option>
+                                <option value="+967">Yemen (+967)</option>
+                            </select>
+                            <input type="tel" id="phone_number" name="phone_number" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Area of Interest</label>
+                        <input type="text" id="interest" name="area_of_interest" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="submit-button" class="disabled" disabled>Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AXELNA SOLUTIONS G.K. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("JKjW6B9v40AfwdgTE");
+        })();
+    </script>
+    
+</body>
+</html>

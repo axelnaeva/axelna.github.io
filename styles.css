@@ -1,0 +1,872 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+header {
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the viewport */
+    background: linear-gradient(135deg, #404040, #808080);;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+h2{
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text for better readability */
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.navigationBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    font-weight:bold
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold color for hover effect */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 65vh; /* Adjust height as needed */
+    color: white;
+    text-align: center;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -1; /* Pushes the video behind other content */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.hero-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text for better readability */
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #3A95D0; /* Use company logo blue color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #46bddb; /* Use company logo green color for hover effect */
+}
+
+
+
+.blue-yonder {
+    background: linear-gradient(135deg, #404040cc, #808080);
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: bold;
+    text-shadow: 4px 1px 10px rgba(0, 0, 0, 0.56);
+}
+
+
+
+
+.section-divider {
+    background-color: #efefef;
+    padding: 1rem;
+    text-align: center;
+}
+
+.section-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #3A95D0;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-button:hover,
+.section-button:focus {
+    background-color: #005580;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.planning-section {
+    display: none;
+}
+
+.planning-section.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem 3rem 3rem;
+    background: #efefef;
+}
+
+.planning-section-header{
+    display: flex;
+    justify-content: center;
+    color: #00b7f1;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 2px 4px rgb(31 11 11 / 90%);
+}
+
+.key-benefits-header{
+    display: flex;
+    justify-content: center;
+    color: #00b7f1;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 2px 4px rgb(31 11 11 / 90%);
+}
+
+.key-benefits-img{
+    width: 85px; height: 85px;
+}
+
+.key-benefits-descr-container{
+    display: flex; justify-content: space-around; width: 100%; margin-top: 20px;
+}
+
+.key-benefits-descr{
+    width: 30%; text-align: center;
+}
+
+.results-container{
+    margin-top: 2rem; text-align: center;
+}
+
+.results-header{
+    display: flex;
+    justify-content: center;
+    color: black;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: 0 2px 4px rgb(31 11 11 / 90%);
+}
+
+
+.text-section {
+    margin-bottom: 2rem;
+}
+
+.functionality {
+    margin-top: 0.75rem;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.functionality h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+ul#production_list {
+    list-style: none;
+    padding: 0;
+}
+
+ul#production_list li {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+ul#production_list li:hover {
+    background-color: #f9f9f9;
+    border-radius:0.5rem;
+}
+
+ul#production_list li.active {
+    background-color: #3a95d0;
+    font-weight: bold;
+    color: white;
+    border-radius:0.5rem;
+}
+
+/* Additional CSS for demand planning section */
+ul#demand_list {
+    list-style: none;
+    padding: 0;
+}
+
+ul#demand_list li {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+ul#demand_list li:hover {
+    background-color: #f9f9f9;
+    border-radius:0.5rem;
+}
+
+ul#demand_list li.active {
+    background-color: #3a95d0;
+    font-weight: bold;
+    color: white;
+    border-radius:0.5rem;
+}
+
+ul#distribution_list {
+    list-style: none;
+    padding: 0;
+}
+
+ul#distribution_list li {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd; /* Border color */
+}
+
+ul#distribution_list li:hover {
+    background-color: #f9f9f9; /* Hover background color */
+    border-radius:0.5rem;
+}
+
+ul#distribution_list li.active {
+    background-color: #3a95d0;
+    font-weight: bold;
+    color: white;
+    border-radius:0.5rem;
+}
+
+
+.text-section ul li.active {
+    font-weight: bold;
+    background:#3A95D0;
+    color:white;
+    padding:0.5rem;
+    width:fit-content;
+    border-radius:0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.image-section {
+    float: left;
+    width: 50%;
+    padding: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+/* Solutions Section */
+.solutions {
+    background-color:#8080801c;
+    color:black;
+    padding: 2.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solutions-header {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #80808070;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 4px 1px 10px rgb(0 0 0 / 56%);
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.solution-slide {
+    display: none;
+    text-align: left;
+}
+
+.solution-slide.active {
+    display: block;
+}
+
+.slide-content {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    height: 300px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add a dark text shadow */
+}
+
+.slide-content p {
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 4px rgb(0 0 0);
+    background: #80808085;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width:75%;
+}
+
+/* Updated CSS for navigation arrows */
+.prev, .next {
+    background-color:gray;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Add a hover effect for the arrows */
+.prev:hover, .next:hover {
+    background-color: black;
+}
+
+
+/* Dots */
+.dots-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #717171;
+}
+
+.big-dot {
+    height: 15px;
+    width: 15px;
+}
+
+/* Services Section */
+.services {
+    padding: 40px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.services-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.services-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.production_planning {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 55vh;
+    background-color: #f9f9f9;
+}
+.text-section {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width:40%
+}
+.text-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color:white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text for better readability */
+}
+.text-section ul {
+    list-style-type: none;
+    padding: 1rem;
+}
+.text-section ul li {
+    list-style-type: none;
+    padding:0.5rem;
+    font-size: 1.2em;
+    color: black;
+    margin:0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.text-section ul li:hover {
+    list-style-type: none;
+    background-color:gray;
+    color:white;
+    width:fit-content;
+    border-radius:0.5rem;
+    padding:0.5rem;
+    width:fit-content;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+.text-section p {
+    font-size: 1em;
+    color: #666;
+    margin-top: 20px;
+}
+.text-section a {
+    text-decoration: none;
+    color: #3A95D0;
+    font-weight: bold;
+}
+.text-section a:hover {
+    text-decoration: underline;
+}
+.image-section {
+    width: 65vw;
+    height:100%;
+}
+
+.image-section img {
+    height: 50vh;
+    width: 58vw;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 1px rgb(62 60 60);
+}
+
+.description-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.description-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 2px;
+    width: 60vw;
+    font-style: italic;
+}
+
+.key-benefits-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    flex-direction: column;
+    background: linear-gradient(135deg, #3A95D0 0%, #006C53 100%);
+    border-radius: 0.2rem;
+    color: white;
+    margin-top: 40px; /* Adjust margin-top as needed */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+
+
+.about-us {
+    position: relative; /* Ensure the relative position for absolute positioning of background */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/southeast_asia.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Ensure the background image is behind other content */
+    opacity: 0.2; /* Adjust opacity as needed */
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.about-text {
+    flex: 2;
+    padding: 3rem;
+}
+
+.founder-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #eef2f7;
+
+    
+}
+
+.founder-info img {
+    width: 100%;
+    max-width: 15rem;
+    border-radius: 0.5rem;
+}
+
+.details {
+    text-align: center;
+}
+
+
+.contact-us {
+    background-image: url('images/city.jpg'); /* Replace 'images/bangkok.jpg' with your actual image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 3rem;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    background-color: rgb(55 52 52 / 53%);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    flex: 1;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group-name-left {
+    margin-bottom: 15px;
+    width: -webkit-fill-available;
+}
+
+.form-group-name-right {
+    margin-bottom: 15px;
+    width: -webkit-fill-available;
+    margin-left:1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: -webkit-fill-available;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #444444a1;
+    color: #fff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+
+
+.product_description{
+    display: flex;
+    width: 100%;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.image-container {
+    width: 300px; /* Adjust size as needed */
+}
+
+.image-container img {
+    filter: saturate(330%); /* Adjust saturation value (percentage) */
+}
+
+.downloadInfo{
+    font-weight: bold;
+    padding: .5rem;
+    color: black;
+}
+
+.downloadPdfButtonsContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.downloadContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #dfdfdf;
+    margin-top: 2rem;
+    border-radius: 0.2rem;
+}
+
+.downloadButton{
+    width: 100%;
+    background: orange;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    height: 2rem;
+    border: 0px;
+    margin: 0.5rem;
+}
+
+.area-of-interest-container{
+    display: flex; flex-direction: column;
+}
+
+.area-of-interest-content{
+    display:flex; justify-content:flex-start;align-items: center;margin-left:5rem
+}
+
+.country-dropdown{
+    width: auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #f5f5f5de;
+    border-radius: 4px;
+    background-color: #444444a1;
+    color: #fff;
+    margin-right:1rem;
+}
+
+.disabled {
+    background-color: black;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .section-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
