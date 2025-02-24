@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        const serviceID = 'service_c0g37pj'; // Your Service ID
+        const serviceID = 'service_6trceoh'; // Your Service ID
         const templateID = 'template_aefnfeo'; // Your Template ID
         
         emailjs.sendForm(serviceID, templateID, this)
